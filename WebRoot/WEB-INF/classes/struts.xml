@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.action.extension " value="messageResource"/>
+   
+    <package name="normal" namespace="/normal" extends="struts-default" >
+        <action name="login" class="nuc.djy.action.NormalLoginAction_djy">
+            <result name="success">/djy_normal.jsp</result>
+        </action>
+    </package>
+    <package name="admin" namespace="/admin" extends="struts-default">
+        <action name="login" class="nuc.djy.action.AdminLoginAction_djy">
+            <result name="success">/djy_manager.jsp</result>
+        </action>
+    </package>
+</struts>
